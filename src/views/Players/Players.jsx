@@ -4,17 +4,18 @@ import { Link } from 'react-router-dom'
 
 export default function Players() {
     const [players, setPlayers] = useState([]);
-
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
         async function effectPlayers() {
             const storePlayers = await getPlayers();
             console.log(storePlayers);
             setPlayers(storePlayers);
+            setLoading(false);
         }
 
     effectPlayers()}, [])
 
-
+        if (loading) return <p>Loading...</p>
     return (
         <div>
             {players.map((player => {

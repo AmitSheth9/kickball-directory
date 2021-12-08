@@ -4,7 +4,8 @@ import { useParams } from 'react-router';
 import { Link } from 'react-router-dom'
 
 export default function TeamDetails() {
-    const [team, setTeam] = useState([]);
+    const [team, setTeam] = useState();
+    const [loading, setLoading] = useState(true);
     const {id} = useParams();
     console.log(id);
     useEffect(() => {
@@ -12,15 +13,16 @@ export default function TeamDetails() {
     const storeTeam = await getTeamById(id);
     console.log(storeTeam);
     setTeam(storeTeam);
+    setLoading(false);
 
 }
 getTeamEffect()}, [id])
-
+    
+if (loading) return <p>Loading team...</p>
     return (
         <div>
          <p>{team.name}</p>
-         <p>{team.city}, {team.state}</p>
-         <p>{team.name}</p>   
+         <p>{team.city}, {team.state}</p>  
         <div> {team.players ? team.players.map((player => {
              return (
                  <Link to={`/players/${player.id}`}>
