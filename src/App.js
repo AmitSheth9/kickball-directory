@@ -1,7 +1,5 @@
-import logo from './logo.svg';
-import React from 'react';
-import reactDom from 'react-dom';
-import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom'; 
+
+import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom'; 
 import Home from './Home';
 import Players from './views/Players/Players';
 import PlayerDetails from './views/Players/PlayerDetails';
@@ -19,25 +17,19 @@ function App() {
           <NavLink to='/players'>Players</NavLink>
         </header>
         <Switch>
-          <Route exact path='/'>
-            <Home />
-          </Route>
-          <Route exact path='/teams'>
-            <Teams />
-          </Route>
+          <Route exact path='/'
+            component={Home}/>
+          <Route exact path='/teams' render={(routeProps) => <Teams {...routeProps} />}/>
           <Route
-            exact path='/teams/:id' >
-            <TeamDetails />
-          </Route>
-          <Route exact path='/players' >
-            <Players />
-          </Route>
-          <Route exact path='/players/:id' >
-            <PlayerDetails/>
-          </Route>
-        </Switch>
+            exact path='/teams/:id'
+            component={TeamDetails}/>
+          <Route exact path='/players' 
+            component={Players }/>
+          <Route exact path='/players/:id' 
+            component={PlayerDetails}/>
+      
 
-
+          </Switch>
       </Router>
     </div>
   );
