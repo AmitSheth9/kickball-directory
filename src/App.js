@@ -12,8 +12,8 @@ function App() {
     <div className="App">
       <Router>
         <header>
-          <NavLink to='/'>Home</NavLink>
-          <NavLink to='/teams'>Teams</NavLink>
+          <NavLink to='/'>Home</NavLink>{'  '}
+          <NavLink to='/teams'>Teams</NavLink>{'  '}
           <NavLink to='/players'>Players</NavLink>
         </header>
         <Switch>
