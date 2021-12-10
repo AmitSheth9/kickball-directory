@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import TeamForm from './TeamForm';
+import TeamForm from '../../components/TeamForm';
 import { createTeam } from '../../services/teams'
 import { useHistory } from 'react-router';
 

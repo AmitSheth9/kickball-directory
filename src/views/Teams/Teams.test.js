@@ -10,6 +10,6 @@ it ('should render the teams page', async () => {
         </MemoryRouter>
     );
     screen.getByText('Loading...')
-    const team = await screen.findByText('Acme USA')
+    const team = await screen.findByText('Alexandria Companions')
     expect(team).toBeInTheDocument();
 })

@@ -25,9 +25,11 @@ if (loading) return <p>Loading team...</p>
          <p>{team.city}, {team.state}</p>  
         <div> {team.players ? team.players.map((player => {
              return (
+                <div key={player.id}> 
                  <Link to={`/players/${player.id}`}>
                  <p key ={player.id}>{player.name}</p>
                  </Link>
+                 </div>
                  )}
                  )) : ''}
                  </div>   

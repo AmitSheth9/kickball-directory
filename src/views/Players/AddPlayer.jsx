@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import PlayerForm from './PlayerForm';
+import PlayerForm from '../../components/PlayerForm';
 import { createPlayer } from '../../services/players';
 import { useHistory } from 'react-router';
 

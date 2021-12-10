@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { getTeams, deleteTeamById } from '../../services/teams'
 import { Link } from 'react-router-dom';
-
+import './teams.css';
 
 
 
@@ -44,12 +44,13 @@ function Teams() {
             return (
                <div key={team.id} className='team-container'> 
                     <Link to={`/teams/${team.id}`}>
-                    <div className='team'>{team.name}</div>
+                    <div className='team-link'>{team.name}</div>
                     </Link>
-                   <button className = 'delete-button' onClick={() => handleDelete({id:team.id, name: team.name })}>Delete Team</button>
-                   <Link to={`teams/edit/${team.id}`}>
-                    <button className='edit-button'>Edit</button>
+                    <Link to={`teams/edit/${team.id}`}>
+                    <button className='team-button'>Edit</button>
                     </Link>
+                   <button className = 'team-button' onClick={() => handleDelete({id:team.id, name: team.name })}>Delete Team</button>
+                   
                 </div>
             )}
             

@@ -1,12 +1,19 @@
 .team-container {
     display: flex;
-    margin: 5px;
+    font-size: 15px;
+}
+.team-link {
+    margin-right: 15px;
+    font-size: 20px;
+    margin-top: 10px;
     
+    background-color: beige;
 }
-.team {
-    margin-right: 5px;
-}
-.delete-button {
-    font-size: 10px;
-    height: 80%;
+.team-button {
+    font-size: 15px;
+    background-color: yellow;
+    height: 25px;
+    margin-top: 10px;
+    color: blue;
+    cursor: pointer;
 }

@@ -19,7 +19,8 @@ export default function Players() {
 
     effectPlayers()}, [])
 
-    const handleDelete = async (id) => {
+    const handleDelete = async (id, name) => {
+        alert(`You have deleted ${name}`)
         console.log(id);
         const response = await deletePlayerById(id);
         console.log(response);
@@ -28,14 +29,14 @@ export default function Players() {
 
         if (loading) return <p>Loading...</p>
     return (
-        <div>
-            <Link to='/players/new'>Add a player</Link>
+        <div><br/>
+            <Link to='/players/new'>Add a player</Link><br/><br/>
             {players.map((player => {
                 return (
             <div key={player.id} className='player-container'>   
                 <Link className='player-link' to={`/players/${player.id}`}>{player.name}</Link>
-                <Link className='player-link' to={`/players/edit/${player.id}`}>Edit Player</Link>
-                <Link className='player-link' to={`/players`}><button onClick={() => handleDelete(player.id)}>Delete Player</button></Link>
+                <Link  to={`/players/edit/${player.id}`}><button className='player-button'>Edit Player</button></Link>
+                <Link  to={`/players`}><button className='player-button' onClick={() => handleDelete(player.id, player.name)}>Delete Player</button></Link>
             </div>          
             )}))}
 

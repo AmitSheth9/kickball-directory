@@ -2,5 +2,20 @@
     display: flex;
 }
 .player-link {
-    margin-right: 15px;
+    margin-left: 10px;
+    margin-right: 25px;
+    font-size: 20px;
+    padding: 4px;
+    background-color: beige;
+}
+.player-button {
+    font-size: 15px;
+    background-color: yellow;
+    height: 25px;
+    margin-bottom: 5px;
+    color: blue;
+    cursor: pointer;
+}
+body {
+    background-color: beige;
 }

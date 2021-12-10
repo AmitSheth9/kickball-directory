@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { updatePlayerById } from '../../services/players';
-import PlayerForm from './PlayerForm';
+import PlayerForm from '../../components/PlayerForm';
 import { useParams } from 'react-router';
 import { useHistory } from 'react-router';
 

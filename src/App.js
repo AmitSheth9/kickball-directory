@@ -1,6 +1,6 @@
 
 import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom'; 
-import Home from './Home';
+import Home from './views/Home/Home';
 import Players from './views/Players/Players';
 import PlayerDetails from './views/Players/PlayerDetails';
 import Teams from './views/Teams/Teams';
@@ -8,7 +8,6 @@ import TeamDetails from './views/Teams/TeamDetails';
 import AddTeam from './views/Teams/AddTeam';
 import './App.css';
 import EditTeam from './views/Teams/EditTeam.jsx';
-import PlayerForm from './views/Players/PlayerForm.jsx';
 import EditPlayer from './views/Players/EditPlayer';
 import AddPlayer from './views/Players/AddPlayer';
 

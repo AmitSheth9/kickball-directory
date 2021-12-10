@@ -11,6 +11,6 @@ it ('should render the Players list', async () => {
     );
 
     screen.getByText('Loading...')
-    const player = await screen.findByText('Bud E. Guy', {exact: false})
+    const player = await screen.findByText('Apu V', {exact: false})
     expect(player).toBeInTheDocument();
 });
