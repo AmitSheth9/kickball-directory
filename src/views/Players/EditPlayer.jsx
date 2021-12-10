@@ -9,7 +9,7 @@ export default function EditPlayer() {
     const history = useHistory()
     const [name, setName] = useState('')
     const [position, setPosition] = useState('');
-    const [teamId, setTeamId] = useState(id);
+    const [teamId, setTeamId] = useState('');
    
 
     const handleSubmit = async (e) => {

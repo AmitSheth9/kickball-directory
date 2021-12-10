@@ -10,6 +10,7 @@ import './App.css';
 import EditTeam from './views/Teams/EditTeam.jsx';
 import PlayerForm from './views/Players/PlayerForm.jsx';
 import EditPlayer from './views/Players/EditPlayer';
+import AddPlayer from './views/Players/AddPlayer';
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
           <Route exact path='/teams/edit/:id'
             component={EditTeam} />
           <Route exact path='/players/new'
-          component={PlayerForm} />
+          component={AddPlayer} />
           <Route exact path='/players/edit/:id'
           component={EditPlayer} />
           <Route exact path='/'
