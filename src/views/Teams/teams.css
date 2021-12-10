@@ -1,0 +1,12 @@
+.team-container {
+    display: flex;
+    margin: 5px;
+    
+}
+.team {
+    margin-right: 5px;
+}
+.delete-button {
+    font-size: 10px;
+    height: 80%;
+}

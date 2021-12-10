@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { getPlayers } from '../../services/players';
 import { Link } from 'react-router-dom'
+import './players.css'
 
 export default function Players() {
     const [players, setPlayers] = useState([]);
@@ -18,11 +19,13 @@ export default function Players() {
         if (loading) return <p>Loading...</p>
     return (
         <div>
+            <Link to='/players/new'>Add a player</Link>
             {players.map((player => {
                 return (
-                <Link to={`/players/${player.id}`}>  
-                <p key={player.id}>{player.name}</p>
-                </Link>             
+            <div key={player.id} className='player-container'>   
+                <Link className='player-link' to={`/players/${player.id}`}>{player.name}</Link>
+                <Link className='player-link' to={`/players/edit/${player.id}`}>Edit Player</Link>
+            </div>          
             )}))}
 
             

@@ -1,0 +1,6 @@
+.player-container {
+    display: flex;
+}
+.player-link {
+    margin-right: 15px;
+}
