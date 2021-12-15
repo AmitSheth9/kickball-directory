@@ -1,0 +1,19 @@
+.team-container {
+    display: flex;
+    font-size: 15px;
+}
+.team-link {
+    margin-right: 15px;
+    font-size: 20px;
+    margin-top: 10px;
+    
+    background-color: beige;
+}
+.team-button {
+    font-size: 15px;
+    background-color: yellow;
+    height: 25px;
+    margin-top: 10px;
+    color: blue;
+    cursor: pointer;
+}
